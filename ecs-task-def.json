@@ -1,0 +1,25 @@
+{
+  "family": "Cards",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "credibanco-cards-service",
+      "image": "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/credibanco-cards-service:${IMAGE_TAG}",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "memory": 512,
+      "cpu": 256
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "256",
+  "memory": "512"
+}

@@ -1,6 +1,7 @@
 {
   "family": "Cards",
   "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::725914487651:role/CredibancoEcs",
   "containerDefinitions": [
     {
       "name": "credibanco-cards-service",
@@ -14,7 +15,15 @@
         }
       ],
       "memory": 512,
-      "cpu": 256
+      "cpu": 256,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/credibanco-cards-service",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
     }
   ],
   "requiresCompatibilities": [

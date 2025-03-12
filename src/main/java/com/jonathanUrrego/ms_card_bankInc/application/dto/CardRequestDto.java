@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
-public class CradRequestDto {
+public class CardRequestDto {
     @NotBlank
     @Size(min = 6, max = 6)
     @Pattern(regexp = "\\d{6}", message = "El productId debe ser numérico y tener 6 dígitos.")

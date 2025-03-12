@@ -1,5 +1,7 @@
 package com.jonathanUrrego.ms_card_bankInc.infraestructure.controller;
 
+import com.jonathanUrrego.ms_card_bankInc.application.dto.CardPaymentDto;
+import com.jonathanUrrego.ms_card_bankInc.application.dto.CardRechargeDto;
 import com.jonathanUrrego.ms_card_bankInc.application.dto.CardResponseDto;
 import com.jonathanUrrego.ms_card_bankInc.application.dto.CardRequestDto;
 import com.jonathanUrrego.ms_card_bankInc.application.service.CardService;
